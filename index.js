@@ -8,16 +8,36 @@ console.log(formEl,inputEL,weatherEL)
 
 
 
+formEl.onsubmit = function(e) {
+    e.preventDefault()
+    var query = inputEl.value
+    console.log(query)
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=&units=imperial&appid=528fbf428cefbb3ae73ba5ed4014a523=' + query)
+    .then(funtion(response)) 
+        return response.json()
+    }
+    .then(function(result) {
+        renderWeather(result)
+    })
+
+
+    // function renderWeather(weatherObject) {
+    //     weatherEL.innerHTML = ""
+    //     console.log(weatherObject.main)
+    //     var main = document.createElement('h2')
+    //     main.textContent = weatherObject.main +n (" + weatherObject.temp + ")
+    //     weatherEL.appendChild(main)
+          
+    // }
+
+
 
 // btn.onclick = function() {
 //     //console.log('clicked')
-//     fetch('https://api.openweathermap.org/data/2.5/weather?q=/^\w+\s\w+$/g&units=imperial&appid=528fbf428cefbb3ae73ba5ed4014a523')
+//     fetch()
 //     .then(function(res) {
 //         return res.json()
-//     })
-//     .then(function(res) {
-//         console.log(res)
-//     })
+//     
 
 //     res.results.forEach(function() {
 //         var container = document.createElement('div')
