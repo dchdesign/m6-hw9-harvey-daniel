@@ -1,0 +1,25 @@
+
+body {
+    
+}
+
+header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 200px;
+}
+
+label {
+    order: -1;
+}
