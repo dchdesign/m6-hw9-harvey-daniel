@@ -22,15 +22,14 @@ formEl.onsubmit = function(e) {
     })
 }
 
-
-    // function renderWeather(weatherObject) {
-    //     weatherEL.innerHTML = ""
-    //     console.log(weatherObject.main)
-    //     var main = document.createElement('h2')
-    //     main.textContent = weatherObject.main +n (" + weatherObject.temp + ")
-    //     weatherEL.appendChild(main)
+    function renderWeather(weatherObject) {
+        weatherEL.innerHTML = ""
+        console.log(weatherObject.main)
+        var main = document.createElement('h2')
+        main.textContent = weatherObject.main +n (" + weatherObject.temp + ")
+        weatherEL.appendChild(main)
           
-    // }
+    }
 
 
 
