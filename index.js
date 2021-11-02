@@ -10,9 +10,9 @@ console.log(formEl,inputEL,weatherEL)
 
 formEl.onsubmit = function(e) {
     e.preventDefault()
-    var query = inputEl.value
+    var query = inputEL.value
     // console.log(query)
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=&units=imperial&appid=528fbf428cefbb3ae73ba5ed4014a523' + query)
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + query + '&units=imperial&appid=528fbf428cefbb3ae73ba5ed4014a523')
     .then(function(response) {
         return response.json()
     })
