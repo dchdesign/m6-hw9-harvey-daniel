@@ -24,13 +24,25 @@ formEl.onsubmit = function(e) {
 }
 
     function renderWeather(weatherObj) {
-        console.log(weatherObj.main.temp)
+        // console.log(weatherObj.main.temp)
         weatherEL.innerHTML = ""
         
 
         var weather = document.createElement('h2')
-        weather.textContent = weatherObj.main.temp
+        weather.textContent = weatherObj.name
         weatherEL.appendChild(weather)      
+        
+        var weather = document.createElement('h3')
+        weather.textContent = weatherObj.main.temp 
+        weatherEL.appendChild(weather)    
+        
+        // var weather = document.createElement('h3')
+        // weather.textContent = weatherObj.sys.sunrise
+        // weatherEL.appendChild(weather)    
+
+        // var weather = document.createElement('h3')
+        // weather.textContent = weatherObj.sys.sunset
+        // weatherEL.appendChild(weather)    
         
         
     }
