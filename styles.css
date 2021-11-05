@@ -2,6 +2,10 @@
 body {
     background-color: blue;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
     
 }
 
@@ -11,14 +15,19 @@ header {
     color: #ffffff;
 }
 
-.container {
-   
+main {
+    display: flex;
     text-align: center;
- 
+}
+
+.container {
+    flex-direction: column;
+    margin: auto;
+}
 
 form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     max-width: 200px;
 }
