@@ -24,10 +24,12 @@ formEl.onsubmit = function(e) {
 }
 
     function renderWeather(weatherObj) {
+        console.log(weatherObj.main.temp)
         weatherEL.innerHTML = ""
+        
 
         var weather = document.createElement('h2')
-        weather.textContent = weatherObj.temp + " (" + weatherObj.feels_like + ")"
+        weather.textContent = weatherObj.main.temp
         weatherEL.appendChild(weather)      
         
         
