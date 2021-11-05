@@ -17,17 +17,20 @@ formEl.onsubmit = function(e) {
         return response.json()
     })
     .then(function(result) {
-        // renderWeather(result)
-        console.log(result)
-        console.log('weather')
+        renderWeather(result)
+        // console.log(result)
+        
     })
 }
 
     function renderWeather(weatherObj) {
-        console.log(weatherObj.main)
-        var main = document.createElement('h2')
-        main.textContent = weatherObject.main + " (" + weatherObj.main + ")"
-        weatherEL.appendChild(main)        
+        weatherEL.innerHTML = ""
+
+        var weather = document.createElement('h2')
+        weather.textContent = weatherObj.temp + " (" + weatherObj.feels_like + ")"
+        weatherEL.appendChild(weather)      
+        
+        
     }
 
 
